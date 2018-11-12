@@ -1,11 +1,11 @@
 {
-    "name": "commercetools/symfony-cart-bundle",
-    "description": "Symfony CartBundle for Commercetools platform",
+    "name": "commercetools/symfony-state-bundle",
+    "description": "Symfony StateBundle for Commercetools platform",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Commercetools\\Symfony\\CartBundle\\": "src/"
+            "Commercetools\\Symfony\\StateBundle\\": "src/"
         }
     },
     "require": {

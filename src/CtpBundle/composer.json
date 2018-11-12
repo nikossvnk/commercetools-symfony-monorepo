@@ -1,5 +1,5 @@
 {
-    "name": "commercetools/symfony-CtpBundle",
+    "name": "commercetools/symfony-ctp-bundle",
     "description": "Symfony CtpBundle for Commercetools platform",
     "type": "library",
     "license": "MIT",
