@@ -6,10 +6,6 @@ parameters:
         require-dev:
             symplify/monorepo-builder: '^5.2'
 
-#        autoload:
-#            psr-4:
-#                Commercetools\Symfony\: 'src/'
-
     # for "split" command
     directories_to_repositories:
         src/CartBundle: 'git@github.com:nikossvnk/commercetools-symfony-CartBundle.git'

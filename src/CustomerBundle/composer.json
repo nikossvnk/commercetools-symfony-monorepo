@@ -8,6 +8,11 @@
             "Commercetools\\Symfony\\CustomerBundle\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Commercetools\\Symfony\\CustomerBundle\\Tests\\": "Tests/"
+        }
+    },
     "require": {
         "php": ">=5.6",
         "commercetools/symfony-ctp-bundle": "^2.5"

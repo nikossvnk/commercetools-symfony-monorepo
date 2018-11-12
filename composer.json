@@ -32,9 +32,28 @@
     },
     "autoload": {
         "psr-4": {
-            "Commercetools\\Symfony\\": "src/",
             "Commercetools\\Symfony\\CartBundle\\": "src/CartBundle/src/",
-            "Commercetools\\Symfony\\CtpBundle\\": "src/CtpBundle/src/"
+            "Commercetools\\Symfony\\CatalogBundle\\": "src/CatalogBundle/src/",
+            "Commercetools\\Symfony\\CtpBundle\\": "src/CtpBundle/src/",
+            "Commercetools\\Symfony\\CustomerBundle\\": "src/CustomerBundle/src/",
+            "Commercetools\\Symfony\\ExampleBundle\\": "src/ExampleBundle/src/",
+            "Commercetools\\Symfony\\ReviewBundle\\": "src/ReviewBundle/src/",
+            "Commercetools\\Symfony\\SetupBundle\\": "src/SetupBundle/src/",
+            "Commercetools\\Symfony\\ShoppingListBundle\\": "src/ShoppingListBundle/src/",
+            "Commercetools\\Symfony\\StateBundle\\": "src/StateBundle/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Commercetools\\Symfony\\CartBundle\\Tests\\": "src/CartBundle/Tests/",
+            "Commercetools\\Symfony\\CatalogBundle\\Tests\\": "src/CatalogBundle/Tests/",
+            "Commercetools\\Symfony\\CtpBundle\\Tests\\": "src/CtpBundle/Tests/",
+            "Commercetools\\Symfony\\CustomerBundle\\Tests\\": "src/CustomerBundle/Tests/",
+            "Commercetools\\Symfony\\ExampleBundle\\Tests\\": "src/ExampleBundle/Tests/",
+            "Commercetools\\Symfony\\ReviewBundle\\Tests\\": "src/ReviewBundle/Tests/",
+            "Commercetools\\Symfony\\SetupBundle\\Tests\\": "src/SetupBundle/Tests/",
+            "Commercetools\\Symfony\\ShoppingListBundle\\Tests\\": "src/ShoppingListBundle/Tests/",
+            "Commercetools\\Symfony\\StateBundle\\Tests\\": "src/StateBundle/Tests/"
         }
     }
 }
