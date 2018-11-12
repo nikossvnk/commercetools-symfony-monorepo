@@ -1,8 +1,13 @@
 {
-    "name": "commercetools/symfony-bundle",
-    "description": "Symfony bundle for Commercetools platform",
+    "name": "commercetools/symfony-CtpBundle",
+    "description": "Symfony CtpBundle for Commercetools platform",
     "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Commercetools\\Symfony\\CtpBundle\\": "src/"
+        }
+    },
     "require": {
         "php": ">=5.6",
         "symfony/framework-bundle": "^3.4 | ^4.0",
@@ -22,7 +27,7 @@
         "symfony/twig-bundle": "^4.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.3",
+        "phpunit/phpunit": "^7.0 | ^6.0 | ^5.0",
         "symfony/phpunit-bridge": "^3.4 | ^4.0",
         "commercetools/commercetools-api-reference": "dev-master",
         "matthiasnoback/symfony-dependency-injection-test": "^3.0",
@@ -30,11 +35,9 @@
         "cache/filesystem-adapter": "^1.0",
         "symplify/monorepo-builder": "^5.2"
     },
-    "autoload": {
-        "psr-4": {
-            "Commercetools\\Symfony\\CartBundle\\": "src/CartBundle/src/",
-            "Commercetools\\Symfony\\CtpBundle\\": "src/CtpBundle/src/",
-            "Commercetools\\Symfony\\": "src/"
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.2-dev"
         }
     }
 }
