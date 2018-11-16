@@ -15,6 +15,6 @@
     },
     "require": {
         "symfony/security-bundle": "^3.4 | ^4.0",
-        "commercetools/symfony-ctp-bundle": "dev-master"
+        "commercetools/symfony-ctp-bundle": "self.version"
     }
 }

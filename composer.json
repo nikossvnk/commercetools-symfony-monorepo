@@ -30,6 +30,17 @@
         "cache/filesystem-adapter": "^1.0",
         "symplify/monorepo-builder": "^5.2"
     },
+    "replace": {
+        "commercetools/symfony-cart-bundle": "self.version",
+        "commercetools/symfony-catalog-bundle": "self.version",
+        "commercetools/symfony-ctp-bundle": "self.version",
+        "commercetools/symfony-customer-bundle": "self.version",
+        "commercetools/symfony-example-bundle": "self.version",
+        "commercetools/symfony-review-bundle": "self.version",
+        "commercetools/symfony-setup-bundle": "self.version",
+        "commercetools/symfony-shopping-list-bundle": "self.version",
+        "commercetools/symfony-state-bundle": "self.version"
+    },
     "autoload": {
         "psr-4": {
             "Commercetools\\Symfony\\CartBundle\\": "src/CartBundle/src/",
