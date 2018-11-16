@@ -18,6 +18,11 @@
         "symfony/console": "^3.4 | ^4.0",
         "symfony/workflow": "^3.4 | ^4.0",
         "twig/extensions": "^1.5",
-        "commercetools/symfony-ctp-bundle": "self.version"
+        "commercetools/symfony-ctp-bundle": "^0.3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3.0-dev"
+        }
     }
 }

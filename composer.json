@@ -66,5 +66,10 @@
             "Commercetools\\Symfony\\ShoppingListBundle\\Tests\\": "src/ShoppingListBundle/Tests/",
             "Commercetools\\Symfony\\StateBundle\\Tests\\": "src/StateBundle/Tests/"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3.0-dev"
+        }
     }
 }
