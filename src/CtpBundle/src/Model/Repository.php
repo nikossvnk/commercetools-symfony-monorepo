@@ -8,10 +8,12 @@ namespace Commercetools\Symfony\CtpBundle\Model;
 use Commercetools\Core\Client;
 use Commercetools\Core\Model\MapperInterface;
 use Commercetools\Core\Request\AbstractApiRequest;
+use Commercetools\Core\Request\AbstractQueryRequest;
 use Commercetools\Core\Request\ClientRequestInterface;
 use Commercetools\Core\Request\QueryAllRequestInterface;
 use Commercetools\Symfony\CtpBundle\Service\MapperFactory;
 use Psr\Cache\CacheItemPoolInterface;
+use Symfony\Component\Cache\CacheItem;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Repository
@@ -42,7 +44,7 @@ class Repository
 
     /**
      * Repository constructor.
-     * @param $enableCache
+     * @param string|bool $enableCache
      * @param CacheItemPoolInterface $cache
      * @param Client $client
      * @param MapperFactory $mapperFactory
@@ -67,7 +69,7 @@ class Repository
     }
 
     /**
-     * @param $locale
+     * @param string $locale
      * @return MapperInterface
      */
     public function getMapper($locale)
@@ -76,9 +78,9 @@ class Repository
     }
 
     /**
-     * @param $cacheKey
-     * @param QueryAllRequestInterface $request
-     * @param $locale
+     * @param string $cacheKey
+     * @param AbstractQueryRequest $request
+     * @param string $locale
      * @param bool $force
      * @param int $ttl
      * @return mixed
@@ -88,18 +90,14 @@ class Repository
      */
     protected function retrieveAll(
         $cacheKey,
-        QueryAllRequestInterface $request,
+        AbstractQueryRequest $request,
         $locale,
         $force = false,
         $ttl = self::CACHE_TTL
     ) {
-        $data = [];
         if (!$force && $this->enableCache && $this->cache->hasItem($cacheKey)) {
             $cachedData = $this->cache->getItem($cacheKey);
-            if (!empty($cachedData)) {
-                $data = $cachedData;
-            }
-            $result = unserialize($data->get());
+            $result = unserialize($cachedData->get());
             $result->setContext($this->client->getConfig()->getContext());
         } else {
             $result = $this->getAll($request, $locale);
@@ -110,13 +108,13 @@ class Repository
     }
 
     /**
-     * @param QueryAllRequestInterface $request
-     * @param $locale
+     * @param AbstractQueryRequest $request
+     * @param string $locale
      * @return mixed
      * @throws \Commercetools\Core\Error\ApiException
      * @throws \Commercetools\Core\Error\InvalidTokenException
      */
-    protected function getAll(QueryAllRequestInterface $request, $locale)
+    protected function getAll(AbstractQueryRequest $request, $locale)
     {
         $lastId = null;
         $data = ['results' => []];
@@ -140,9 +138,9 @@ class Repository
     }
 
     /**
-     * @param $cacheKey
+     * @param string $cacheKey
      * @param AbstractApiRequest $request
-     * @param $locale
+     * @param string $locale
      * @param bool $force
      * @param int $ttl
      * @return \Commercetools\Core\Model\Common\JsonDeserializeInterface|null
@@ -190,7 +188,7 @@ class Repository
 
     /**
      * @param ClientRequestInterface $request
-     * @param $locale
+     * @param string $locale
      * @param QueryParams|null $params
      * @return mixed
      */

@@ -14,8 +14,7 @@
         }
     },
     "require": {
-        "php": ">=5.6",
         "symfony/security-bundle": "^3.4 | ^4.0",
-        "commercetools/symfony-ctp-bundle": "^2.5"
+        "commercetools/symfony-ctp-bundle": "dev-master"
     }
 }

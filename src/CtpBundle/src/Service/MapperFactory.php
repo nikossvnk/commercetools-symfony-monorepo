@@ -18,7 +18,7 @@ class MapperFactory
     }
 
     /**
-     * @param $locale
+     * @param string $locale
      * @return MapperInterface
      */
     public function build($locale)

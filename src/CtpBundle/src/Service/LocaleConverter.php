@@ -17,7 +17,7 @@ class LocaleConverter
     }
 
     /**
-     * @param $locale
+     * @param string $locale
      * @return string
      */
     public function convert($locale)

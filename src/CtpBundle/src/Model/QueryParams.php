@@ -15,8 +15,8 @@ class QueryParams
     private $params = [];
 
     /**
-     * @param $paramName
-     * @param $paramValue
+     * @param string $paramName
+     * @param string $paramValue
      * @return $this
      */
     public function add($paramName, $paramValue)
