@@ -5,6 +5,7 @@
 namespace Commercetools\Symfony\CustomerBundle\Security\User;
 
 
+use Commercetools\Symfony\CtpBundle\Security\User\CtpUser;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 class User implements CtpUser

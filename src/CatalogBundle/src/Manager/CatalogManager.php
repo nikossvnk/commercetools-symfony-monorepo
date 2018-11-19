@@ -70,7 +70,7 @@ class CatalogManager
      * @param $slug
      * @param $currency
      * @param $country
-     * @return \Commercetools\Core\Model\Product\ProductProjection|null
+     * @return ProductProjection|null
      */
     public function getProductBySlug($locale, $slug, $currency, $country)
     {
@@ -93,7 +93,7 @@ class CatalogManager
     /**
      * @param $locale
      * @param $id
-     * @return ProductProjection
+     * @return ProductProjection|null
      */
     public function getProductById($locale, $id)
     {
