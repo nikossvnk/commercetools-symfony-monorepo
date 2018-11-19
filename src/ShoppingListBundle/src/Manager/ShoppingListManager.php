@@ -76,7 +76,7 @@ class ShoppingListManager
      * @param $locale
      * @param $shoppingListId
      * @param CustomerReference|null $customer
-     * @param null $anonymousId
+     * @param string|null $anonymousId
      * @param QueryParams|null $params
      * @return mixed
      */
