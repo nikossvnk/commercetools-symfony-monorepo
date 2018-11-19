@@ -29,8 +29,11 @@ class UserProvider implements UserProviderInterface
     public function loadUserByUsername($username)
     {
         $id = $this->session->get(CustomerRepository::CUSTOMER_ID);
-        $cartId = $this->session->get(CartRepository::CART_ID);
-        $cartItemCount = $this->session->get(CartRepository::CART_ITEM_COUNT);
+
+        $cartId = class_exists(CartRepository::class) ?
+            $this->session->get(CartRepository::CART_ID) : null;
+        $cartItemCount = class_exists(CartRepository::class) ?
+            $this->session->get(CartRepository::CART_ITEM_COUNT) : null;
 
         $userClass = $this->userClass;
         return $userClass::create($username, '', ['ROLE_USER'], $id, $cartId, $cartItemCount);
