@@ -43,10 +43,10 @@ class CatalogRepository extends Repository
 
 
     /**
-     * @param $locale
-     * @param $slug
-     * @param $currency
-     * @param $country
+     * @param string $locale
+     * @param string $slug
+     * @param string $currency
+     * @param string $country
      * @return ProductProjection|null
      */
     public function getProductBySlug($locale, $slug, $currency, $country)
@@ -64,9 +64,9 @@ class CatalogRepository extends Repository
     }
 
     /**
-     * @param $locale
-     * @param $id
-     * @return ProductProjection
+     * @param string $locale
+     * @param string $id
+     * @return ProductProjection|null
      */
     public function getProductById($locale, $id)
     {
@@ -114,14 +114,14 @@ class CatalogRepository extends Repository
     }
 
     /**
-     * @param $locale
-     * @param $itemsPerPage
-     * @param $currentPage
-     * @param $sort
-     * @param $currency
-     * @param $country
+     * @param string $locale
+     * @param int $itemsPerPage
+     * @param int $currentPage
+     * @param string $sort
+     * @param string $currency
+     * @param string $country
      * @param UriInterface $uri
-     * @param $search
+     * @param string|null $search
      * @param array $filters
      * @return array
      */
