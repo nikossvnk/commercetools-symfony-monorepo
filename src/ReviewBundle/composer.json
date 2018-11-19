@@ -15,7 +15,7 @@
     },
     "require": {
         "commercetools/symfony-ctp-bundle": "^0.3",
-        "commercetools/symfony-catalog-bunlde": "^0.3",
+        "commercetools/symfony-catalog-bundle": "^0.3",
         "commercetools/symfony-state-bundle": "^0.3"
     },
     "extra": {
