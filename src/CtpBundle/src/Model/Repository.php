@@ -9,11 +9,8 @@ use Commercetools\Core\Client;
 use Commercetools\Core\Model\MapperInterface;
 use Commercetools\Core\Request\AbstractApiRequest;
 use Commercetools\Core\Request\AbstractQueryRequest;
-use Commercetools\Core\Request\ClientRequestInterface;
-use Commercetools\Core\Request\QueryAllRequestInterface;
 use Commercetools\Symfony\CtpBundle\Service\MapperFactory;
 use Psr\Cache\CacheItemPoolInterface;
-use Symfony\Component\Cache\CacheItem;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Repository
@@ -187,12 +184,12 @@ class Repository
     }
 
     /**
-     * @param ClientRequestInterface $request
+     * @param AbstractApiRequest $request
      * @param string $locale
      * @param QueryParams|null $params
      * @return mixed
      */
-    protected function executeRequest(ClientRequestInterface $request, $locale = 'en', QueryParams $params = null)
+    protected function executeRequest(AbstractApiRequest $request, $locale = 'en', QueryParams $params = null)
     {
         $client = $this->getClient();
 
