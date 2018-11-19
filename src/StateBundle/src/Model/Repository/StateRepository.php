@@ -24,7 +24,7 @@ class StateRepository extends Repository
 
     /**
      * StateRepository constructor.
-     * @param $enableCache
+     * @param string|bool $enableCache
      * @param CacheItemPoolInterface $cache
      * @param Client $client
      * @param MapperFactory $mapperFactory
@@ -47,7 +47,7 @@ class StateRepository extends Repository
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @return State
      */
     public function getById($id)
@@ -58,8 +58,8 @@ class StateRepository extends Repository
     }
 
     /**
-     * @param $type
-     * @param $key
+     * @param string $type
+     * @param string $key
      * @return State
      */
     public function getByTypeAndKey($type, $key)
@@ -72,7 +72,7 @@ class StateRepository extends Repository
     }
 
     /**
-     * @param $key
+     * @param string $key
      * @return State
      */
     public function getByKey($key)

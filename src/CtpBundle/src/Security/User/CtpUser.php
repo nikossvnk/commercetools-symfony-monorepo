@@ -3,7 +3,7 @@
  * @author @jayS-de <jens.schulze@commercetools.de>
  */
 
-namespace Commercetools\Symfony\CustomerBundle\Security\User;
+namespace Commercetools\Symfony\CtpBundle\Security\User;
 
 use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
