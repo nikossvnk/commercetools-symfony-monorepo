@@ -157,7 +157,7 @@ class RepositoryTest extends TestCase
 class TestRepository extends Repository
 {
     public function retrieveAll(
-        $cacheKey, QueryAllRequestInterface $request, $locale, $force = false, $ttl = self::CACHE_TTL
+        $cacheKey, AbstractQueryRequest $request, $locale, $force = false, $ttl = self::CACHE_TTL
     ) {
         return parent::retrieveAll($cacheKey, $request, $locale, $force, $ttl);
     }
